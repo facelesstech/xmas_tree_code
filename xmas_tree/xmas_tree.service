@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/xmas_tree_code/xmas_tree/xmas_main.py
+WorkingDirectory=/home/pi/xmas_tree_code/xmas_tree/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=xmas_tree
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
