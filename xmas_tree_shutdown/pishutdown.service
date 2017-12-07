@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/xmas_tree_code/xmas_tree_shutdown/pishutdown.py
+WorkingDirectory=/home/pi/xmas_tree_code/xmas_tree_shutdown/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pishutdown
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
