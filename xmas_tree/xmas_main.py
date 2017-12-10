@@ -41,7 +41,7 @@ def buttonStateChanged(pin):
         
         buttonStatus = buttonStatus + 1
 
-        if (buttonStatus == 6):
+        if (buttonStatus == 7):
             buttonStatus = 0
 
 GPIO.add_event_detect(14, GPIO.BOTH, callback=buttonStateChanged,bouncetime=400)
@@ -307,58 +307,78 @@ while True:
         time.sleep(chaseTime)
         allOff()
 
-# PWM
-#    if (buttonStatus == 6):
-#        allOff()
-#        #LedPin = 2
-#        two = GPIO.PWM(2, 1000)     # set Frequece to 1KHz
-#        two.start(0)                     # Duty Cycle = 0
-#        four = GPIO.PWM(4, 1000)     # set Frequece to 1KHz
-#        four.start(0)                     # Duty Cycle = 0
-#        five = GPIO.PWM(5, 1000)     # set Frequece to 1KHz
-#        five.start(0)                     # Duty Cycle = 0
-#        six = GPIO.PWM(6, 1000)     # set Frequece to 1KHz
-#        six.start(0)                     # Duty Cycle = 0
-#        seven = GPIO.PWM(7, 1000)     # set Frequece to 1KHz
-#        seven.start(0)                     # Duty Cycle = 0
-#        eight = GPIO.PWM(8, 1000)     # set Frequece to 1KHz
-#        eight.start(0)                     # Duty Cycle = 0
-#        nine = GPIO.PWM(9, 1000)     # set Frequece to 1KHz
-#        nine.start(0)                     # Duty Cycle = 0
-#        ten = GPIO.PWM(10, 1000)     # set Frequece to 1KHz
-#        ten.start(0)                     # Duty Cycle = 0
-#        eleven = GPIO.PWM(11, 1000)     # set Frequece to 1KHz
-#        eleven.start(0)                     # Duty Cycle = 0
-#        twelve = GPIO.PWM(12, 1000)     # set Frequece to 1KHz
-#        twelve.start(0)                     # Duty Cycle = 0
-#        thirteen = GPIO.PWM(13, 1000)     # set Frequece to 1KHz
-#        thirteen.start(0)                     # Duty Cycle = 0
-#        while True:
-#                for dc in range(0, 101, 4):   # Increase duty cycle: 0~100
-#                    two.ChangeDutyCycle(dc)     # Change duty cycle
-#                    four.ChangeDutyCycle(dc)     # Change duty cycle
-#                    five.ChangeDutyCycle(dc)     # Change duty cycle
-#                    six.ChangeDutyCycle(dc)     # Change duty cycle
-#                    seven.ChangeDutyCycle(dc)     # Change duty cycle
-#                    eight.ChangeDutyCycle(dc)     # Change duty cycle
-#                    nine.ChangeDutyCycle(dc)     # Change duty cycle
-#                    ten.ChangeDutyCycle(dc)     # Change duty cycle
-#                    eleven.ChangeDutyCycle(dc)     # Change duty cycle
-#                    twelve.ChangeDutyCycle(dc)     # Change duty cycle
-#                    thirteen.ChangeDutyCycle(dc)     # Change duty cycle
-#                    time.sleep(0.05)
-#                time.sleep(1)
-#                for dc in range(100, -1, -4): # Decrease duty cycle: 100~0
-#                    two.ChangeDutyCycle(dc)
-#                    four.ChangeDutyCycle(dc)
-#                    five.ChangeDutyCycle(dc)
-#                    six.ChangeDutyCycle(dc)
-#                    seven.ChangeDutyCycle(dc)
-#                    eight.ChangeDutyCycle(dc)     # Change duty cycle
-#                    nine.ChangeDutyCycle(dc)     # Change duty cycle
-#                    ten.ChangeDutyCycle(dc)     # Change duty cycle
-#                    eleven.ChangeDutyCycle(dc)     # Change duty cycle
-#                    twelve.ChangeDutyCycle(dc)     # Change duty cycle
-#                    thirteen.ChangeDutyCycle(dc)     # Change duty cycle
-#                    time.sleep(0.05)
-#                time.sleep(1)
+    if (buttonStatus == 6):
+        climbTime = 0.2
+
+        # Up
+        allOff()
+        GPIO.output(7, True) # Tree no 22 Red
+        GPIO.output(10, True) # Tree no 8 Blue
+        GPIO.output(23, True) # Tree no 23 Green
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(6, True) # Tree no 16 Green
+        GPIO.output(15, True) # Tree no 2 Green
+        GPIO.output(22, True) # Tree no 24 Red
+        GPIO.output(20, True) # Tree no 17 Red
+        GPIO.output(24, True) # Tree no 13 Red
+        GPIO.output(12, True) # Tree no 15 Green
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(18, True) # Tree no 20 Red
+        GPIO.output(4, True) # Tree no 1 Red
+        GPIO.output(17, True) # Tree no 10 Green
+        GPIO.output(9, True) # Tree no 14 Green
+        GPIO.output(13, True) # Tree no 3 Red
+        GPIO.output(5, True) # Tree no 7 Red
+        GPIO.output(26, True) # Tree no 12 Red
+        GPIO.output(8, True) # Tree no 6 Blue
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(27, True) # Tree no 11 Blue
+        GPIO.output(25, True) # Tree no 5 Blue
+        GPIO.output(16, True) # Tree no 9 Blue
+        GPIO.output(11, True) # Tree no 21 Blue
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(19, True) # Tree no 18 Red
+        GPIO.output(2, True) # Star
+        time.sleep(climbTime)
+
+        # Down
+        allOff()
+        GPIO.output(27, True) # Tree no 11 Blue
+        GPIO.output(25, True) # Tree no 5 Blue
+        GPIO.output(16, True) # Tree no 9 Blue
+        GPIO.output(11, True) # Tree no 21 Blue
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(18, True) # Tree no 20 Red
+        GPIO.output(4, True) # Tree no 1 Red
+        GPIO.output(17, True) # Tree no 10 Green
+        GPIO.output(9, True) # Tree no 14 Green
+        GPIO.output(13, True) # Tree no 3 Red
+        GPIO.output(5, True) # Tree no 7 Red
+        GPIO.output(26, True) # Tree no 12 Red
+        GPIO.output(8, True) # Tree no 6 Blue
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(6, True) # Tree no 16 Green
+        GPIO.output(15, True) # Tree no 2 Green
+        GPIO.output(22, True) # Tree no 24 Red
+        GPIO.output(20, True) # Tree no 17 Red
+        GPIO.output(24, True) # Tree no 13 Red
+        GPIO.output(12, True) # Tree no 15 Green
+        time.sleep(climbTime)
+
+        allOff()
+        GPIO.output(7, True) # Tree no 22 Red
+        GPIO.output(10, True) # Tree no 8 Blue
+        GPIO.output(23, True) # Tree no 23 Green
+        time.sleep(climbTime)
