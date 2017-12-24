@@ -238,75 +238,55 @@ while True:
         chaseTime = 0.1
         allOff()
         GPIO.output(26, True) # Tree no 12 Red
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(19, True) # Tree no 18 Red
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(2, True) # Star
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(11, True) # Tree no 21 Blue
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(5, True) # Tree no 7 Red
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(12, True) # Tree no 15 Green
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(7, True) # Tree no 22 Red
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(6, True) # Tree no 16 Green
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(8, True) # Tree no 6 Blue
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(27, True) # Tree no 11 Blue
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(18, True) # Tree no 20 Red
-        time.sleep(chaseTime)
-        allOff()
-        GPIO.output(15, True) # Tree no 2 Green
-        time.sleep(chaseTime)
-        allOff()
         GPIO.output(4, True) # Tree no 1 Red
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(19, True) # Tree no 18 Red
         GPIO.output(17, True) # Tree no 10 Green
         time.sleep(chaseTime)
         allOff()
         GPIO.output(9, True) # Tree no 14 Green
+        GPIO.output(2, True) # Star
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(11, True) # Tree no 21 Blue
         GPIO.output(22, True) # Tree no 24 Red
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(5, True) # Tree no 7 Red
         GPIO.output(10, True) # Tree no 8 Blue
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(12, True) # Tree no 15 Green
         GPIO.output(25, True) # Tree no 5 Blue
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(7, True) # Tree no 22 Red
         GPIO.output(24, True) # Tree no 13 Red
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(6, True) # Tree no 16 Green
         GPIO.output(23, True) # Tree no 23 Green
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(8, True) # Tree no 6 Blue
         GPIO.output(16, True) # Tree no 9 Blue
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(27, True) # Tree no 11 Blue
         GPIO.output(13, True) # Tree no 3 Red
         time.sleep(chaseTime)
         allOff()
+        GPIO.output(18, True) # Tree no 20 Red
         GPIO.output(20, True) # Tree no 17 Red
         time.sleep(chaseTime)
-        allOff()
 
+        allOff()
+        GPIO.output(15, True) # Tree no 2 Green
+        GPIO.output(4, True) # Tree no 1 Red
+        time.sleep(chaseTime)
+
+# Climb mode
     if (buttonStatus == 6):
         climbTime = 0.2
 
@@ -393,7 +373,6 @@ while True:
         GPIO.output(23, True) # Tree no 23 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(6, True) # Tree no 16 Green
         GPIO.output(15, True) # Tree no 2 Green
         GPIO.output(22, True) # Tree no 24 Red
@@ -402,7 +381,6 @@ while True:
         GPIO.output(12, True) # Tree no 15 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(18, True) # Tree no 20 Red
         GPIO.output(4, True) # Tree no 1 Red
         GPIO.output(17, True) # Tree no 10 Green
@@ -413,33 +391,27 @@ while True:
         GPIO.output(8, True) # Tree no 6 Blue
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(27, True) # Tree no 11 Blue
         GPIO.output(25, True) # Tree no 5 Blue
         GPIO.output(16, True) # Tree no 9 Blue
         GPIO.output(11, True) # Tree no 21 Blue
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(19, True) # Tree no 18 Red
         GPIO.output(2, True) # Star
         time.sleep(climbTime)
-#        allOff()
-#        time.sleep(climbTime)
 
         # Down
         GPIO.output(19, False) # Tree no 18 Red
         GPIO.output(2, False) # Star
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(27, False) # Tree no 11 Blue
         GPIO.output(25, False) # Tree no 5 Blue
         GPIO.output(16, False) # Tree no 9 Blue
         GPIO.output(11, False) # Tree no 21 Blue
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(18, False) # Tree no 20 Red
         GPIO.output(17, False) # Tree no 10 Green
         GPIO.output(13, False) # Tree no 3 Red
@@ -450,7 +422,6 @@ while True:
         GPIO.output(9, False) # Tree no 14 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(6, False) # Tree no 16 Green
         GPIO.output(15, False) # Tree no 2 Green
         GPIO.output(22, False) # Tree no 24 Red
@@ -459,7 +430,6 @@ while True:
         GPIO.output(12, False) # Tree no 15 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(7, False) # Tree no 22 Red
         GPIO.output(10, False) # Tree no 8 Blue
         GPIO.output(23, False) # Tree no 23 Green
@@ -475,7 +445,6 @@ while True:
         GPIO.output(23, True) # Tree no 23 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(6, True) # Tree no 16 Green
         GPIO.output(15, True) # Tree no 2 Green
         GPIO.output(22, True) # Tree no 24 Red
@@ -484,7 +453,6 @@ while True:
         GPIO.output(12, True) # Tree no 15 Green
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(18, True) # Tree no 20 Red
         GPIO.output(4, True) # Tree no 1 Red
         GPIO.output(17, True) # Tree no 10 Green
@@ -495,50 +463,14 @@ while True:
         GPIO.output(8, True) # Tree no 6 Blue
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(27, True) # Tree no 11 Blue
         GPIO.output(25, True) # Tree no 5 Blue
         GPIO.output(16, True) # Tree no 9 Blue
         GPIO.output(11, True) # Tree no 21 Blue
         time.sleep(climbTime)
 
-#        allOff()
         GPIO.output(19, True) # Tree no 18 Red
         GPIO.output(2, True) # Star
         time.sleep(climbTime)
         allOff()
         time.sleep(climbTime)
-
-#        # Down
-##        allOff()
-#        GPIO.output(27, False) # Tree no 11 Blue
-#        GPIO.output(25, False) # Tree no 5 Blue
-#        GPIO.output(16, False) # Tree no 9 Blue
-#        GPIO.output(11, False) # Tree no 21 Blue
-#        time.sleep(climbTime)
-#
-##        allOff()
-#        GPIO.output(18, False) # Tree no 20 Red
-#        GPIO.output(17, False) # Tree no 10 Green
-#        GPIO.output(13, False) # Tree no 3 Red
-#        GPIO.output(26, False) # Tree no 12 Red
-#        GPIO.output(8, False) # Tree no 6 Blue
-#        GPIO.output(4, False) # Tree no 1 Red
-#        GPIO.output(5, False) # Tree no 7 Red
-#        GPIO.output(9, False) # Tree no 14 Green
-#        time.sleep(climbTime)
-#
-##        allOff()
-#        GPIO.output(6, False) # Tree no 16 Green
-#        GPIO.output(15, False) # Tree no 2 Green
-#        GPIO.output(22, False) # Tree no 24 Red
-#        GPIO.output(20, False) # Tree no 17 Red
-#        GPIO.output(24, False) # Tree no 13 Red
-#        GPIO.output(12, False) # Tree no 15 Green
-#        time.sleep(climbTime)
-#
-##        allOff()
-#        GPIO.output(7, False) # Tree no 22 Red
-#        GPIO.output(10, False) # Tree no 8 Blue
-#        GPIO.output(23, False) # Tree no 23 Green
-#        time.sleep(climbTime)
